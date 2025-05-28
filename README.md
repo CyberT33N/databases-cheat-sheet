@@ -32,7 +32,11 @@ https://github.com/TanStack/db?utm_source=tldrwebdev
 
 
 
+---------------
 
+ Instant DB (Tool)
+
+Give your frontend a real-time database that handles optimistic updates, multiplayer sync, offline mode, and collaboration features automatically. 
 
 
 
