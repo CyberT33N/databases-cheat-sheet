@@ -34,6 +34,16 @@ https://github.com/TanStack/db?utm_source=tldrwebdev
 
 ---------------
 
+
+ LiveStore is a next-generation state management framework based on reactive SQLite and built-in sync engine.
+livestore.dev 
+
+
+
+
+
+
+
  Instant DB (Tool)
 
 Give your frontend a real-time database that handles optimistic updates, multiplayer sync, offline mode, and collaboration features automatically. 
