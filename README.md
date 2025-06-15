@@ -7,8 +7,32 @@
  Supabase — An Open-Source Alternative to Firebase
 
 
+<br><br>
+<br><br>
+
+---
+
+<br><br>
+<br><br>
 
 
+# logs
+
+## parseabl
+- https://github.com/parseablehq/parseable?tab=readme-ov-file
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+
+---
 
 <br><br>
 <br><br>
