@@ -55,6 +55,95 @@ https://github.com/TanStack/db?utm_source=tldrwebdev
 
 
 
+## server-less
+
+
+# Turbopuffer
+
+<details><summary>Click to expand..</summary>
+
+**Ja**, das ist eine **Vector Database** – aber nicht irgendeine. **Turbopuffer** (grandioser Name übrigens) ist ein **serverloses Vektor- und Volltext-Suchsystem**, das:
+
+### 🔍 **Was macht Turbopuffer konkret?**
+
+Es kombiniert:
+
+* **Vektorbasierte Suche** (für Embeddings, also semantische Suche z. B. bei LLMs),
+* **Full-text Search** (klassische Schlagwortsuche),
+* und speichert das Ganze **direkt auf Object Storage** wie **Amazon S3** – also **ohne klassische Datenbankserver**.
+
+### 🚀 Architektur (vereinfacht):
+
+```
+Client ➜ API ➜ In-Memory SSD Cache ➜ Object Storage (S3)
+```
+
+Klingt nach: „Keep hot stuff fast, keep big stuff cheap.“
+
+---
+
+### 💸 **Was ist besonders daran?**
+
+| Feature             | Turbopuffer                       |
+| ------------------- | --------------------------------- |
+| ✅ Serverless        | Kein Cluster, keine Maschinen     |
+| ✅ Cheap AF          | S3-Level Kosten (z. B. \$0.33/GB) |
+| ✅ High-Scale        | 150 Mrd. Dokumente, 6K+ QPS       |
+| ✅ Hybrid-Search     | Vector + Full-Text                |
+| ✅ Fast cold start   | Millisekunden-Range               |
+| ✅ SSD Caching       | Für warme Daten                   |
+| ✅ Embedding support | GPT/OpenAI kompatibel             |
+| ✅ Fully managed     | Plug & Query                      |
+
+---
+
+### ⚙️ Typische Anwendung:
+
+**Beispiel:** Du hast 1 Million Produktbeschreibungen und willst semantisch suchen („Zeig mir Produkte wie das hier…“) — aber *billig* und *schnell*. Turbopuffer erlaubt dir:
+
+* `insert(vector, metadata)`
+* `search("ähnlich zu diesem Vektor", topK=10)`
+* `filter(price > 10 && category == 'Tools')`
+
+---
+
+### 📊 Performance (laut ihrer Benchmarks):
+
+* **p50 (warm):** 16 ms
+* **p99 (warm):** 33 ms
+* **p99 (cold):** \~677 ms (immer noch okay für S3)
+
+---
+
+### 🤯 TL;DR:
+
+**Turbopuffer** ist:
+
+* eine **moderne, serverlose Vektor+FTS-Datenbank**
+* **optimiert für Preis, Skalierung und Einfachheit**
+* **besonders geeignet für LLM/RAG-Anwendungen**
+* und versucht, **Weaviate**, **Pinecone**, **Qdrant** & Co den Rang abzulaufen — **für 10x weniger Geld**.
+
+Wäre wie wenn Pinecone und Typesense zusammen ein Kind mit AWS S3 zeugen. 👶📦
+
+Willst du ein Projekt drauf aufsetzen?
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---------------
 
